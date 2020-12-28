@@ -6,23 +6,25 @@ namespace LoanEarlyPayoffUI.Models
     public class Loan
     {
         public Loan(string name, decimal initialPrincipalRemaining, decimal interestRate,
-            decimal monthlyPayment, decimal oneTimePayment)
+            decimal monthlyPayment, decimal? oneTimePayment=0, decimal? addlMonthlyPayment=0)
         {
             Name = name;
             InitialPrincipalRemaining = initialPrincipalRemaining;
             InterestRate = interestRate;
             MonthlyPayment = monthlyPayment;
-            OneTimePayment = oneTimePayment;
+            OneTimePayment = oneTimePayment ?? 0;
+            AddlMonthlyPayment = addlMonthlyPayment ?? 0;
         }
 
         public Loan(string name, string initialPrincipalRemaining, string interestRate,
-           string monthlyPayment, string oneTimePayment)
+           string monthlyPayment, string oneTimePayment, string addlMonthlyPayment)
         {
             Name = name;
             InitialPrincipalRemaining = decimal.Parse(initialPrincipalRemaining);
             InterestRate = decimal.Parse(interestRate);
             MonthlyPayment = decimal.Parse(monthlyPayment);
-            OneTimePayment = decimal.Parse(oneTimePayment);
+            OneTimePayment = string.IsNullOrWhiteSpace(oneTimePayment) ? 0 : decimal.Parse(oneTimePayment);
+            AddlMonthlyPayment = string.IsNullOrWhiteSpace(addlMonthlyPayment) ? 0 : decimal.Parse(addlMonthlyPayment);
         }
 
         public int PaymentsApplied = 0;
@@ -32,10 +34,13 @@ namespace LoanEarlyPayoffUI.Models
         public decimal InterestRate { get; set; }
         public decimal TotalInterestPaid = 0;
         public decimal MonthlyPayment { get; set; }
+        public decimal AddlMonthlyPayment { get; set; }
         public decimal OneTimePayment { get; set; }
         private decimal InterestMultiplier => InterestRate / 12;
         public DateTime CurrentDT => DateTime.Now;
         public DateTime CalcDT => CurrentDT.AddMonths(PaymentsApplied);
+
+        public Loan SecondLoan { get; set; }
 
         private decimal CalculateBalanceAfterPayment()
         {
@@ -50,26 +55,27 @@ namespace LoanEarlyPayoffUI.Models
         public string AmoritizeThis()
         {
             StringBuilder sb = new StringBuilder();
-            var applyOneTimePayment = OneTimePayment > 0;
-
+            var applyAddlPayments = OneTimePayment > 0 || AddlMonthlyPayment > 0;
+            //var applyOneTimePayment = true;
             SingleAmoritize(sb);
 
-            if (applyOneTimePayment)
+            if (applyAddlPayments)
             {
-                var secondLoan = CopyLoan();
-                secondLoan.SingleAmoritize(sb, true);
-                sb.Append($"You saved {Difference(TotalInterestPaid, secondLoan.TotalInterestPaid).ToString("C")} in interest " +
-                    $"and {Difference(PaymentsApplied, secondLoan.PaymentsApplied)} months of payments with your one-time payment!");
+                SecondLoan = CopyLoan();
+                SecondLoan.SingleAmoritize(sb, true);
+                sb.Append($"You saved {Difference(TotalInterestPaid, SecondLoan.TotalInterestPaid).ToString("C")} in interest " +
+                    $"and {Difference(PaymentsApplied, SecondLoan.PaymentsApplied)} months of payments with your additional payment(s)!");
             }
             return sb.ToString();
         }
 
-        private void SingleAmoritize(StringBuilder sb, bool applyOneTimePayment = false)
+        private void SingleAmoritize(StringBuilder sb, bool applyAddlPayments = false)
         {
             PrincipalRemaining = InitialPrincipalRemaining;
-            if (applyOneTimePayment)
+            if (applyAddlPayments)
             {
                 PrincipalRemaining -= OneTimePayment;
+                MonthlyPayment += AddlMonthlyPayment;
             }
             while (PrincipalRemaining - MonthlyPayment > 0)
             {
@@ -81,9 +87,9 @@ namespace LoanEarlyPayoffUI.Models
             GenerateTotalLines(sb);
         }
 
-        private Loan CopyLoan()
+        public Loan CopyLoan()
         {
-            return new Loan(Name, InitialPrincipalRemaining, InterestRate, MonthlyPayment, OneTimePayment);
+            return new Loan(Name, InitialPrincipalRemaining, InterestRate, MonthlyPayment, OneTimePayment, AddlMonthlyPayment);
         }
 
         private decimal Difference(decimal val1, decimal val2) => Math.Abs(val2 - val1);
