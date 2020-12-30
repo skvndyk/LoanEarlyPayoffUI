@@ -61,10 +61,12 @@
             this.AddlMonthlyInput2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -81,7 +83,8 @@
             this.tableLayoutPanel1.Controls.Add(this.MonthlyPaymentInput1, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.InterestRateInput1, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.monthlyPayment1, 0, 4);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(1, 1);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(1);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
@@ -90,7 +93,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(240, 159);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(219, 125);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label1
@@ -106,7 +109,7 @@
             // name1
             // 
             this.name1.AutoSize = true;
-            this.name1.Location = new System.Drawing.Point(1, 31);
+            this.name1.Location = new System.Drawing.Point(1, 24);
             this.name1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.name1.Name = "name1";
             this.name1.Size = new System.Drawing.Size(35, 13);
@@ -116,7 +119,7 @@
             // initPrRemain1
             // 
             this.initPrRemain1.AutoSize = true;
-            this.initPrRemain1.Location = new System.Drawing.Point(1, 62);
+            this.initPrRemain1.Location = new System.Drawing.Point(1, 48);
             this.initPrRemain1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.initPrRemain1.Name = "initPrRemain1";
             this.initPrRemain1.Size = new System.Drawing.Size(100, 13);
@@ -126,7 +129,7 @@
             // interestRate1
             // 
             this.interestRate1.AutoSize = true;
-            this.interestRate1.Location = new System.Drawing.Point(1, 93);
+            this.interestRate1.Location = new System.Drawing.Point(1, 72);
             this.interestRate1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.interestRate1.Name = "interestRate1";
             this.interestRate1.Size = new System.Drawing.Size(85, 13);
@@ -135,40 +138,40 @@
             // 
             // NameInput1
             // 
-            this.NameInput1.Location = new System.Drawing.Point(137, 32);
+            this.NameInput1.Location = new System.Drawing.Point(125, 25);
             this.NameInput1.Margin = new System.Windows.Forms.Padding(1);
             this.NameInput1.Name = "NameInput1";
-            this.NameInput1.Size = new System.Drawing.Size(102, 20);
+            this.NameInput1.Size = new System.Drawing.Size(93, 20);
             this.NameInput1.TabIndex = 7;
             // 
             // InitPrRemainInput1
             // 
-            this.InitPrRemainInput1.Location = new System.Drawing.Point(137, 63);
+            this.InitPrRemainInput1.Location = new System.Drawing.Point(125, 49);
             this.InitPrRemainInput1.Margin = new System.Windows.Forms.Padding(1);
             this.InitPrRemainInput1.Name = "InitPrRemainInput1";
-            this.InitPrRemainInput1.Size = new System.Drawing.Size(102, 20);
+            this.InitPrRemainInput1.Size = new System.Drawing.Size(93, 20);
             this.InitPrRemainInput1.TabIndex = 8;
             // 
             // MonthlyPaymentInput1
             // 
-            this.MonthlyPaymentInput1.Location = new System.Drawing.Point(137, 125);
+            this.MonthlyPaymentInput1.Location = new System.Drawing.Point(125, 97);
             this.MonthlyPaymentInput1.Margin = new System.Windows.Forms.Padding(1);
             this.MonthlyPaymentInput1.Name = "MonthlyPaymentInput1";
-            this.MonthlyPaymentInput1.Size = new System.Drawing.Size(102, 20);
+            this.MonthlyPaymentInput1.Size = new System.Drawing.Size(93, 20);
             this.MonthlyPaymentInput1.TabIndex = 10;
             // 
             // InterestRateInput1
             // 
-            this.InterestRateInput1.Location = new System.Drawing.Point(137, 94);
+            this.InterestRateInput1.Location = new System.Drawing.Point(125, 73);
             this.InterestRateInput1.Margin = new System.Windows.Forms.Padding(1);
             this.InterestRateInput1.Name = "InterestRateInput1";
-            this.InterestRateInput1.Size = new System.Drawing.Size(102, 20);
+            this.InterestRateInput1.Size = new System.Drawing.Size(93, 20);
             this.InterestRateInput1.TabIndex = 9;
             // 
             // monthlyPayment1
             // 
             this.monthlyPayment1.AutoSize = true;
-            this.monthlyPayment1.Location = new System.Drawing.Point(1, 124);
+            this.monthlyPayment1.Location = new System.Drawing.Point(1, 96);
             this.monthlyPayment1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.monthlyPayment1.Name = "monthlyPayment1";
             this.monthlyPayment1.Size = new System.Drawing.Size(88, 13);
@@ -189,7 +192,8 @@
             this.tableLayoutPanel2.Controls.Add(this.InitPrRemainInput2, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.InterestRateInput2, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.MonthlyPaymentInput2, 1, 4);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(252, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(222, 1);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(1);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 5;
@@ -198,7 +202,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(240, 159);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(219, 125);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // label7
@@ -214,7 +218,7 @@
             // name2
             // 
             this.name2.AutoSize = true;
-            this.name2.Location = new System.Drawing.Point(1, 31);
+            this.name2.Location = new System.Drawing.Point(1, 24);
             this.name2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.name2.Name = "name2";
             this.name2.Size = new System.Drawing.Size(35, 13);
@@ -224,7 +228,7 @@
             // initPrRemain2
             // 
             this.initPrRemain2.AutoSize = true;
-            this.initPrRemain2.Location = new System.Drawing.Point(1, 62);
+            this.initPrRemain2.Location = new System.Drawing.Point(1, 48);
             this.initPrRemain2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.initPrRemain2.Name = "initPrRemain2";
             this.initPrRemain2.Size = new System.Drawing.Size(100, 13);
@@ -234,7 +238,7 @@
             // interestRate2
             // 
             this.interestRate2.AutoSize = true;
-            this.interestRate2.Location = new System.Drawing.Point(1, 93);
+            this.interestRate2.Location = new System.Drawing.Point(1, 72);
             this.interestRate2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.interestRate2.Name = "interestRate2";
             this.interestRate2.Size = new System.Drawing.Size(85, 13);
@@ -244,7 +248,7 @@
             // monthlyPayment2
             // 
             this.monthlyPayment2.AutoSize = true;
-            this.monthlyPayment2.Location = new System.Drawing.Point(1, 124);
+            this.monthlyPayment2.Location = new System.Drawing.Point(1, 96);
             this.monthlyPayment2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.monthlyPayment2.Name = "monthlyPayment2";
             this.monthlyPayment2.Size = new System.Drawing.Size(88, 13);
@@ -253,42 +257,42 @@
             // 
             // NameInput2
             // 
-            this.NameInput2.Location = new System.Drawing.Point(137, 32);
+            this.NameInput2.Location = new System.Drawing.Point(125, 25);
             this.NameInput2.Margin = new System.Windows.Forms.Padding(1);
             this.NameInput2.Name = "NameInput2";
-            this.NameInput2.Size = new System.Drawing.Size(102, 20);
+            this.NameInput2.Size = new System.Drawing.Size(93, 20);
             this.NameInput2.TabIndex = 7;
             // 
             // InitPrRemainInput2
             // 
-            this.InitPrRemainInput2.Location = new System.Drawing.Point(137, 63);
+            this.InitPrRemainInput2.Location = new System.Drawing.Point(125, 49);
             this.InitPrRemainInput2.Margin = new System.Windows.Forms.Padding(1);
             this.InitPrRemainInput2.Name = "InitPrRemainInput2";
-            this.InitPrRemainInput2.Size = new System.Drawing.Size(102, 20);
+            this.InitPrRemainInput2.Size = new System.Drawing.Size(93, 20);
             this.InitPrRemainInput2.TabIndex = 8;
             // 
             // InterestRateInput2
             // 
-            this.InterestRateInput2.Location = new System.Drawing.Point(137, 94);
+            this.InterestRateInput2.Location = new System.Drawing.Point(125, 73);
             this.InterestRateInput2.Margin = new System.Windows.Forms.Padding(1);
             this.InterestRateInput2.Name = "InterestRateInput2";
-            this.InterestRateInput2.Size = new System.Drawing.Size(102, 20);
+            this.InterestRateInput2.Size = new System.Drawing.Size(93, 20);
             this.InterestRateInput2.TabIndex = 9;
             // 
             // MonthlyPaymentInput2
             // 
-            this.MonthlyPaymentInput2.Location = new System.Drawing.Point(137, 125);
+            this.MonthlyPaymentInput2.Location = new System.Drawing.Point(125, 97);
             this.MonthlyPaymentInput2.Margin = new System.Windows.Forms.Padding(1);
             this.MonthlyPaymentInput2.Name = "MonthlyPaymentInput2";
-            this.MonthlyPaymentInput2.Size = new System.Drawing.Size(102, 20);
+            this.MonthlyPaymentInput2.Size = new System.Drawing.Size(93, 20);
             this.MonthlyPaymentInput2.TabIndex = 10;
             // 
             // AmoritizeButton
             // 
-            this.AmoritizeButton.Location = new System.Drawing.Point(546, 77);
+            this.AmoritizeButton.Location = new System.Drawing.Point(443, 1);
             this.AmoritizeButton.Margin = new System.Windows.Forms.Padding(1);
             this.AmoritizeButton.Name = "AmoritizeButton";
-            this.AmoritizeButton.Size = new System.Drawing.Size(72, 45);
+            this.AmoritizeButton.Size = new System.Drawing.Size(92, 69);
             this.AmoritizeButton.TabIndex = 2;
             this.AmoritizeButton.Text = "Amoritize!";
             this.AmoritizeButton.UseVisualStyleBackColor = true;
@@ -296,25 +300,27 @@
             // 
             // Schedule1
             // 
-            this.Schedule1.Location = new System.Drawing.Point(3, 238);
+            this.Schedule1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Schedule1.Location = new System.Drawing.Point(1, 197);
             this.Schedule1.Margin = new System.Windows.Forms.Padding(1);
             this.Schedule1.Multiline = true;
             this.Schedule1.Name = "Schedule1";
             this.Schedule1.ReadOnly = true;
             this.Schedule1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Schedule1.Size = new System.Drawing.Size(243, 380);
+            this.Schedule1.Size = new System.Drawing.Size(219, 316);
             this.Schedule1.TabIndex = 3;
             this.Schedule1.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             // 
             // Schedule2
             // 
-            this.Schedule2.Location = new System.Drawing.Point(253, 238);
+            this.Schedule2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Schedule2.Location = new System.Drawing.Point(222, 197);
             this.Schedule2.Margin = new System.Windows.Forms.Padding(1);
             this.Schedule2.Multiline = true;
             this.Schedule2.Name = "Schedule2";
             this.Schedule2.ReadOnly = true;
             this.Schedule2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Schedule2.Size = new System.Drawing.Size(243, 380);
+            this.Schedule2.Size = new System.Drawing.Size(219, 316);
             this.Schedule2.TabIndex = 4;
             // 
             // groupBox1
@@ -323,9 +329,10 @@
             this.groupBox1.Controls.Add(this.AddlMonthlyInput1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(5, 161);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(3, 130);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(235, 73);
+            this.groupBox1.Size = new System.Drawing.Size(215, 63);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add\'l Payments";
@@ -333,18 +340,18 @@
             // 
             // LumpSumInput1
             // 
-            this.LumpSumInput1.Location = new System.Drawing.Point(134, 41);
+            this.LumpSumInput1.Location = new System.Drawing.Point(120, 41);
             this.LumpSumInput1.Margin = new System.Windows.Forms.Padding(1);
             this.LumpSumInput1.Name = "LumpSumInput1";
-            this.LumpSumInput1.Size = new System.Drawing.Size(101, 20);
+            this.LumpSumInput1.Size = new System.Drawing.Size(90, 20);
             this.LumpSumInput1.TabIndex = 10;
             // 
             // AddlMonthlyInput1
             // 
-            this.AddlMonthlyInput1.Location = new System.Drawing.Point(134, 17);
+            this.AddlMonthlyInput1.Location = new System.Drawing.Point(120, 17);
             this.AddlMonthlyInput1.Margin = new System.Windows.Forms.Padding(1);
             this.AddlMonthlyInput1.Name = "AddlMonthlyInput1";
-            this.AddlMonthlyInput1.Size = new System.Drawing.Size(101, 20);
+            this.AddlMonthlyInput1.Size = new System.Drawing.Size(90, 20);
             this.AddlMonthlyInput1.TabIndex = 9;
             this.AddlMonthlyInput1.Text = "0";
             // 
@@ -373,27 +380,28 @@
             this.groupBox2.Controls.Add(this.AddlMonthlyInput2);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(255, 161);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Location = new System.Drawing.Point(224, 130);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(235, 73);
+            this.groupBox2.Size = new System.Drawing.Size(215, 63);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Add\'l Payments";
             // 
             // LumpSumInput2
             // 
-            this.LumpSumInput2.Location = new System.Drawing.Point(134, 41);
+            this.LumpSumInput2.Location = new System.Drawing.Point(120, 41);
             this.LumpSumInput2.Margin = new System.Windows.Forms.Padding(1);
             this.LumpSumInput2.Name = "LumpSumInput2";
-            this.LumpSumInput2.Size = new System.Drawing.Size(101, 20);
+            this.LumpSumInput2.Size = new System.Drawing.Size(90, 20);
             this.LumpSumInput2.TabIndex = 10;
             // 
             // AddlMonthlyInput2
             // 
-            this.AddlMonthlyInput2.Location = new System.Drawing.Point(134, 17);
+            this.AddlMonthlyInput2.Location = new System.Drawing.Point(120, 17);
             this.AddlMonthlyInput2.Margin = new System.Windows.Forms.Padding(1);
             this.AddlMonthlyInput2.Name = "AddlMonthlyInput2";
-            this.AddlMonthlyInput2.Size = new System.Drawing.Size(101, 20);
+            this.AddlMonthlyInput2.Size = new System.Drawing.Size(90, 20);
             this.AddlMonthlyInput2.TabIndex = 9;
             this.AddlMonthlyInput2.Text = "0";
             // 
@@ -415,19 +423,36 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Monthly";
             // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34F));
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel1, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.Schedule1, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.Schedule2, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.groupBox2, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.groupBox1, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel2, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.AmoritizeButton, 2, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 3;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.70817F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.42412F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 61.8677F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(670, 514);
+            this.tableLayoutPanel3.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(670, 514);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.Schedule2);
-            this.Controls.Add(this.Schedule1);
-            this.Controls.Add(this.AmoritizeButton);
-            this.Controls.Add(this.tableLayoutPanel2);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.tableLayoutPanel3);
             this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -439,8 +464,9 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -479,6 +505,7 @@
         private System.Windows.Forms.TextBox AddlMonthlyInput2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
     }
 }
 
