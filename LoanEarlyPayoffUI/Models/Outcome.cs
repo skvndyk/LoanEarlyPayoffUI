@@ -8,8 +8,10 @@ namespace LoanEarlyPayoffUI.Models
 {
     public class Outcome
     {
-        public decimal AddlPayment1 { get; set; }
-        public decimal AddlPayment2 { get; set; }
+        public decimal AddlLumpSum1 { get; set; }
+        public decimal AddlLumpSum2 { get; set; }
+        public decimal AddlMonthly1 { get; set; }
+        public decimal AddlMonthly2 { get; set; }
         public decimal InterestPaid1 { get; set; }
         public decimal InterestPaid2 { get; set; }
         public decimal PaymentsApplied1 { get; set; }

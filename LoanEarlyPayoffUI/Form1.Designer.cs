@@ -62,11 +62,21 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.optimizeGroupBox = new System.Windows.Forms.GroupBox();
+            this.maxAddlLumpSumInput = new System.Windows.Forms.TextBox();
+            this.maxAddlMonthlyInput = new System.Windows.Forms.TextBox();
+            this.maxAddlLumpSumLabel = new System.Windows.Forms.Label();
+            this.maxAddlMonthlyLabel = new System.Windows.Forms.Label();
+            this.optimizeButton = new System.Windows.Forms.Button();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.OptimizeTextBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.optimizeGroupBox.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -289,7 +299,8 @@
             // 
             // AmoritizeButton
             // 
-            this.AmoritizeButton.Location = new System.Drawing.Point(443, 1);
+            this.AmoritizeButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.AmoritizeButton.Location = new System.Drawing.Point(510, 29);
             this.AmoritizeButton.Margin = new System.Windows.Forms.Padding(1);
             this.AmoritizeButton.Name = "AmoritizeButton";
             this.AmoritizeButton.Size = new System.Drawing.Size(92, 69);
@@ -301,26 +312,26 @@
             // Schedule1
             // 
             this.Schedule1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Schedule1.Location = new System.Drawing.Point(1, 197);
+            this.Schedule1.Location = new System.Drawing.Point(1, 196);
             this.Schedule1.Margin = new System.Windows.Forms.Padding(1);
             this.Schedule1.Multiline = true;
             this.Schedule1.Name = "Schedule1";
             this.Schedule1.ReadOnly = true;
             this.Schedule1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Schedule1.Size = new System.Drawing.Size(219, 316);
+            this.Schedule1.Size = new System.Drawing.Size(219, 317);
             this.Schedule1.TabIndex = 3;
             this.Schedule1.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             // 
             // Schedule2
             // 
             this.Schedule2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Schedule2.Location = new System.Drawing.Point(222, 197);
+            this.Schedule2.Location = new System.Drawing.Point(222, 196);
             this.Schedule2.Margin = new System.Windows.Forms.Padding(1);
             this.Schedule2.Multiline = true;
             this.Schedule2.Name = "Schedule2";
             this.Schedule2.ReadOnly = true;
             this.Schedule2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Schedule2.Size = new System.Drawing.Size(219, 316);
+            this.Schedule2.Size = new System.Drawing.Size(219, 317);
             this.Schedule2.TabIndex = 4;
             // 
             // groupBox1
@@ -332,7 +343,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(3, 130);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(215, 63);
+            this.groupBox1.Size = new System.Drawing.Size(215, 62);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add\'l Payments";
@@ -383,7 +394,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(224, 130);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(215, 63);
+            this.groupBox2.Size = new System.Drawing.Size(215, 62);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Add\'l Payments";
@@ -436,6 +447,8 @@
             this.tableLayoutPanel3.Controls.Add(this.groupBox1, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel2, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.AmoritizeButton, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.optimizeGroupBox, 2, 1);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 2, 2);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -445,6 +458,89 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 61.8677F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(670, 514);
             this.tableLayoutPanel3.TabIndex = 7;
+            this.tableLayoutPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel3_Paint);
+            // 
+            // optimizeGroupBox
+            // 
+            this.optimizeGroupBox.Controls.Add(this.maxAddlLumpSumInput);
+            this.optimizeGroupBox.Controls.Add(this.maxAddlMonthlyInput);
+            this.optimizeGroupBox.Controls.Add(this.maxAddlLumpSumLabel);
+            this.optimizeGroupBox.Controls.Add(this.maxAddlMonthlyLabel);
+            this.optimizeGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.optimizeGroupBox.Location = new System.Drawing.Point(445, 130);
+            this.optimizeGroupBox.Name = "optimizeGroupBox";
+            this.optimizeGroupBox.Size = new System.Drawing.Size(222, 62);
+            this.optimizeGroupBox.TabIndex = 7;
+            this.optimizeGroupBox.TabStop = false;
+            this.optimizeGroupBox.Text = "Optimize Settings";
+            // 
+            // maxAddlLumpSumInput
+            // 
+            this.maxAddlLumpSumInput.Location = new System.Drawing.Point(113, 38);
+            this.maxAddlLumpSumInput.Name = "maxAddlLumpSumInput";
+            this.maxAddlLumpSumInput.Size = new System.Drawing.Size(100, 20);
+            this.maxAddlLumpSumInput.TabIndex = 4;
+            // 
+            // maxAddlMonthlyInput
+            // 
+            this.maxAddlMonthlyInput.Location = new System.Drawing.Point(113, 14);
+            this.maxAddlMonthlyInput.Name = "maxAddlMonthlyInput";
+            this.maxAddlMonthlyInput.Size = new System.Drawing.Size(100, 20);
+            this.maxAddlMonthlyInput.TabIndex = 3;
+            // 
+            // maxAddlLumpSumLabel
+            // 
+            this.maxAddlLumpSumLabel.AutoSize = true;
+            this.maxAddlLumpSumLabel.Location = new System.Drawing.Point(6, 41);
+            this.maxAddlLumpSumLabel.Name = "maxAddlLumpSumLabel";
+            this.maxAddlLumpSumLabel.Size = new System.Drawing.Size(82, 13);
+            this.maxAddlLumpSumLabel.TabIndex = 2;
+            this.maxAddlLumpSumLabel.Text = "Max Add\'l Lump";
+            // 
+            // maxAddlMonthlyLabel
+            // 
+            this.maxAddlMonthlyLabel.AutoSize = true;
+            this.maxAddlMonthlyLabel.Location = new System.Drawing.Point(6, 17);
+            this.maxAddlMonthlyLabel.Name = "maxAddlMonthlyLabel";
+            this.maxAddlMonthlyLabel.Size = new System.Drawing.Size(93, 13);
+            this.maxAddlMonthlyLabel.TabIndex = 1;
+            this.maxAddlMonthlyLabel.Text = "Max Add\'l Monthly";
+            // 
+            // optimizeButton
+            // 
+            this.optimizeButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.optimizeButton.Location = new System.Drawing.Point(73, 19);
+            this.optimizeButton.Name = "optimizeButton";
+            this.optimizeButton.Size = new System.Drawing.Size(75, 23);
+            this.optimizeButton.TabIndex = 8;
+            this.optimizeButton.Text = "Optimize!";
+            this.optimizeButton.UseVisualStyleBackColor = true;
+            this.optimizeButton.Click += new System.EventHandler(this.OptimizeButton_Click);
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Controls.Add(this.optimizeButton, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.OptimizeTextBox, 0, 1);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(445, 198);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(222, 313);
+            this.tableLayoutPanel4.TabIndex = 8;
+            // 
+            // OptimizeTextBox
+            // 
+            this.OptimizeTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OptimizeTextBox.Location = new System.Drawing.Point(3, 65);
+            this.OptimizeTextBox.Multiline = true;
+            this.OptimizeTextBox.Name = "OptimizeTextBox";
+            this.OptimizeTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.OptimizeTextBox.Size = new System.Drawing.Size(216, 245);
+            this.OptimizeTextBox.TabIndex = 9;
             // 
             // Form1
             // 
@@ -466,6 +562,10 @@
             this.groupBox2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.optimizeGroupBox.ResumeLayout(false);
+            this.optimizeGroupBox.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -506,6 +606,14 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.GroupBox optimizeGroupBox;
+        private System.Windows.Forms.TextBox maxAddlLumpSumInput;
+        private System.Windows.Forms.TextBox maxAddlMonthlyInput;
+        private System.Windows.Forms.Label maxAddlLumpSumLabel;
+        private System.Windows.Forms.Label maxAddlMonthlyLabel;
+        private System.Windows.Forms.Button optimizeButton;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.TextBox OptimizeTextBox;
     }
 }
 
